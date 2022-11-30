@@ -10430,7 +10430,7 @@ const struct flashchip flashchips[] = {
 		.bustype	= BUS_SPI,
 		.manufacture_id	= MACRONIX_ID,
 		.model_id	= MACRONIX_MX77L12850F,
-		.total_size	= 131072,
+		.total_size	= 134217728,
 		.page_size	= 256,
 		/* OTP: 512B total; enter 0xB1, exit 0xC1 */
 		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP | FEATURE_NO_ERASE,
