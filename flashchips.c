@@ -10430,11 +10430,11 @@ const struct flashchip flashchips[] = {
 		.bustype	= BUS_SPI,
 		.manufacture_id	= MACRONIX_ID,
 		.model_id	= MACRONIX_MX77L12850F,
-		.total_size	= 128000000,
+		.total_size	= 134217728,
 		.page_size	= 256,
 		/* OTP: 512B total; enter 0xB1, exit 0xC1 */
-		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP | FEATURE_4BA,
-		.tested		= TEST_OK_PREW,
+		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP | FEATURE_NO_ERASE,
+		.tested		= TEST_OK_PR,
 		.probe		= PROBE_SPI_RDID,
 		.probe_timing	= TIMING_ZERO,
 		.block_erasers	=
@@ -10470,7 +10470,7 @@ const struct flashchip flashchips[] = {
 		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP3_SRWD,
 		.write		= SPI_CHIP_WRITE256,
 		.read		= SPI_CHIP_READ, /* Fast read (0x0B) supported */
-		.voltage	= {3000},
+		.voltage	= {2700, 3600},
 	},
 	
 	
