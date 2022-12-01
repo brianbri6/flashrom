@@ -10448,6 +10448,7 @@ const struct flashchip flashchips[] = {
 				.eraseblocks = { {64 * 128, 256} },
 				.block_erase = SPI_BLOCK_ERASE_D8,
 			}
+		},
 		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP3_SRWD, /* bit6 is quad enable */
 		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP3_SRWD,
 		.write		= SPI_CHIP_WRITE256,
