@@ -10433,7 +10433,7 @@ const struct flashchip flashchips[] = {
 		.total_size	= 16384,
 		.page_size	= 256,
 		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP,
-		.tested		= {.probe = OK, .read = OK, .erase = OK, .write = OK},
+		.tested		= TEST_OK_PREW,
 		.probe		= PROBE_SPI_RDID,
 		.probe_timing	= TIMING_ZERO,
 		.block_erasers	=
