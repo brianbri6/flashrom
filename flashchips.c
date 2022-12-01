@@ -10432,12 +10432,10 @@ const struct flashchip flashchips[] = {
 		.model_id	= MACRONIX_MX77L12850F,
 		.total_size	= 16384,
 		.page_size	= 256,
-		/* OTP: 512B total; enter 0xB1, exit 0xC1 */
-		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP | FEATURE_NO_ERASE,
-		.tested		= {.probe = OK, .read = OK, .erase = NA, .write = NA},
+		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP,
+		.tested		= {.probe = OK, .read = OK, .erase = OK, .write = OK},
 		.probe		= PROBE_SPI_RDID,
 		.probe_timing	= TIMING_ZERO,
-				/* TODO: security register and SBLK/SBULK, configuration register */
 		.printlock	= SPI_PRETTYPRINT_STATUS_REGISTER_BP3_SRWD, /* bit6 is quad enable */
 		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP3_SRWD,
 		.write		= SPI_CHIP_WRITE256,
