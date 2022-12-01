@@ -10466,7 +10466,7 @@ const struct flashchip flashchips[] = {
 		.total_size	= 16384,
 		.page_size	= 256,
 		.feature_bits	= FEATURE_WRSR_WREN | FEATURE_OTP,
-		.tested		= TEST_OK_PREW,
+		.tested		= { .probe = OK, .read = NT, .erase = NT, .write = NT, .wp = NT },
 		.probe		= PROBE_SPI_RDID,
 		.probe_timing	= TIMING_ZERO,
 		.block_erasers	=
@@ -10492,7 +10492,7 @@ const struct flashchip flashchips[] = {
 		.unlock		= SPI_DISABLE_BLOCKPROTECT_BP3_SRWD,
 		.write		= SPI_CHIP_WRITE256,
 		.read		= SPI_CHIP_READ, /* Fast read (0x0B) supported */
-		.voltage	= {2700, 3600},
+		.voltage	= {1650, 2000},
 	},
 	
 	
